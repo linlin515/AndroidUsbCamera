@@ -137,7 +137,8 @@ public class USBCameraActivity extends AppCompatActivity implements CameraDialog
         mUVCCameraView = (CameraViewInterface) mTextureView;
         mUVCCameraView.setCallback(this);
         mCameraHelper = UVCCameraHelper.getInstance();
-        mCameraHelper.setDefaultFrameFormat(UVCCameraHelper.FRAME_FORMAT_MJPEG);
+//        mCameraHelper.setDefaultFrameFormat(UVCCameraHelper.FRAME_FORMAT_MJPEG);
+        mCameraHelper.setDefaultFrameFormat(UVCCameraHelper.FRAME_FORMAT_YUYV);
         mCameraHelper.initUSBMonitor(this, mUVCCameraView, listener);
 
         mCameraHelper.setOnPreviewFrameListener(new AbstractUVCCameraHandler.OnPreViewResultListener() {

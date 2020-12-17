@@ -808,6 +808,7 @@ public abstract class AbstractUVCCameraHandler extends Handler {
         private final IFrameCallback mIFrameCallback = new IFrameCallback() {
             @Override
             public void onFrame(final ByteBuffer frame) {
+                Log.e(TAG, "onFrame");
 //				final MediaVideoBufferEncoder videoEncoder;
 //				synchronized (mSync) {
 //					videoEncoder = mVideoEncoder;
